@@ -101,7 +101,3 @@ This project was created to:
 Anderson Wang
 
 Designed & Developed by Anderson Wang
-
-```
-
-```
