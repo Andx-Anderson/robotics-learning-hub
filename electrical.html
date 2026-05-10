@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electrical &amp; Electronic Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="page-home-button" href="index.html" aria-label="Back to homepage">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 11.2 12 4l9 7.2" />
+        <path d="M5.5 10.5V20h13v-9.5" />
+        <path d="M9.5 20v-6h5v6" />
+      </svg>
+    </a>
+
+    <div class="cursor-reticle" aria-hidden="true">
+      <svg viewBox="0 0 84 84">
+        <path class="reticle-shape" d="M25 11 L14 19 L14 31" />
+        <path class="reticle-shape" d="M59 11 L70 19 L70 31" />
+        <path class="reticle-shape" d="M25 73 L14 65 L14 53" />
+        <path class="reticle-shape" d="M59 73 L70 65 L70 53" />
+        <circle class="reticle-dot" cx="42" cy="42" r="3.5" />
+      </svg>
+    </div>
+
+    <main>
+      <section class="hero electrical-hero">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <span class="section-tag">Robot Electrical Systems</span>
+            <span class="hero-credit">Power, circuits, and control</span>
+            <h1 class="hero-title">Electrical &amp; Electronic Systems</h1>
+            <div class="hero-subtitle">
+              How electricity powers robot movement, decisions, and control
+            </div>
+            <p>
+              Robots need electricity to function. Electrical systems power
+              motors, carry signals, control switches, and help the robot turn
+              commands into real movement. When students understand power,
+              circuits, and components, the robot becomes easier to build,
+              troubleshoot, and improve.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#power"
+                >Compare AC and DC</a
+              >
+              <a class="button button-secondary" href="#circuits"
+                >Explore Circuits</a
+              >
+            </div>
+          </div>
+
+          <div class="hero-panel reveal">
+            <div class="mini-dashboard">
+              <div class="dashboard-card">
+                <h3>Big idea made simple</h3>
+                <p>
+                  Electrical power is what gives a robot the energy to move,
+                  switch, sense, and respond.
+                </p>
+              </div>
+              <div class="dashboard-metrics">
+                <div class="metric">
+                  <strong>AC</strong>
+                  <span>Power from wall outlets</span>
+                </div>
+                <div class="metric">
+                  <strong>DC</strong>
+                  <span>Power from batteries</span>
+                </div>
+              </div>
+              <div class="dashboard-card">
+                <h3>Control idea</h3>
+                <p>
+                  A robot's controller sends electrical signals that turn parts
+                  on, change direction, and adjust speed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="power">
+        <span class="section-tag reveal">AC vs DC Power</span>
+        <h2 class="section-heading reveal">Two Ways Electricity Moves</h2>
+        <p class="section-copy reveal">
+          AC and DC are two different types of electrical power. Both can be
+          useful, but they are used in different places inside buildings,
+          machines, and robots.
+        </p>
+
+        <div class="chart reveal">
+          <div class="chart-grid">
+            <article class="chart-column criteria">
+              <h3>Alternating Current (AC)</h3>
+              <p>
+                Alternating current changes direction back and forth many times
+                per second. It is the type of power used in most buildings.
+              </p>
+              <div class="example-box">
+                <strong>Example:</strong> A wall outlet provides AC power for
+                tools, chargers, and large machines.
+              </div>
+              <button
+                class="power-flip-card"
+                type="button"
+                aria-label="AC power image flip card"
+              >
+                <span class="power-flip-inner">
+                  <span class="power-flip-face power-flip-image">
+                    <img
+                      src="images/ac-power-image-simple.png"
+                      alt="AC power wall outlet example"
+                    />
+                  </span>
+                  <span class="power-flip-face power-flip-summary">
+                    <strong>AC Power</strong>
+                    <span>Wall outlets use alternating current.</span>
+                    <span class="flip-cue">Hover or focus to flip</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+
+            <article class="chart-column constraints">
+              <h3>Direct Current (DC)</h3>
+              <p>
+                Direct current flows in one direction. Robots often use DC power
+                because batteries provide DC electricity.
+              </p>
+              <div class="example-box">
+                <strong>Example:</strong> A robot battery sends DC power to the
+                controller, motors, and electronic parts.
+              </div>
+              <button
+                class="power-flip-card"
+                type="button"
+                aria-label="DC power image flip card"
+              >
+                <span class="power-flip-inner">
+                  <span class="power-flip-face power-flip-image">
+                    <img
+                      src="images/dc-power-image-simple.png"
+                      alt="DC power robot battery example"
+                    />
+                  </span>
+                  <span class="power-flip-face power-flip-summary">
+                    <strong>DC Power</strong>
+                    <span>Robot batteries supply direct current.</span>
+                    <span class="flip-cue">Hover or focus to flip</span>
+                  </span>
+                </span>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="circuits">
+        <span class="section-tag reveal">Circuits</span>
+        <h2 class="section-heading reveal">Paths for Electricity</h2>
+        <p class="section-copy reveal">
+          A circuit is a closed path that allows electricity to flow. In a
+          robot, circuits connect power sources, switches, controllers, sensors,
+          and motors so the system can do useful work.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <div
+              class="circuit-placeholder"
+              aria-label="Series circuit placeholder"
+            >
+              <span class="circuit-node">Battery</span>
+              <span class="circuit-line"></span>
+              <span class="circuit-node">Resistor</span>
+              <span class="circuit-line"></span>
+              <span class="circuit-node">Motor</span>
+            </div>
+            <span class="tech-label">01</span>
+            <h3>Series Circuit</h3>
+            <p>
+              In a series circuit, electricity has one path to follow. If one
+              part opens or fails, the whole circuit stops working.
+            </p>
+            <div class="label-strip">
+              <span>Voltage is shared across parts</span>
+              <span>Current follows one path</span>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div
+              class="circuit-placeholder parallel"
+              aria-label="Parallel circuit placeholder"
+            >
+              <span class="circuit-node">Battery</span>
+              <span class="circuit-branch">
+                <span>Motor A</span>
+                <span>Motor B</span>
+              </span>
+              <span class="circuit-node">Return</span>
+            </div>
+            <span class="tech-label">02</span>
+            <h3>Parallel Circuit</h3>
+            <p>
+              In a parallel circuit, electricity has more than one path. If one
+              path opens, another path can still keep working.
+            </p>
+            <div class="label-strip">
+              <span>Voltage reaches each branch</span>
+              <span>Current splits between paths</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="applied-process reveal">
+          <div class="applied-process-header">
+            <h3>Voltage and Current Areas</h3>
+            <p>
+              Voltage is the electrical push that moves charge through a
+              circuit. Current is the flow of that charge. Engineers label both
+              because they show how much power is available and where the
+              electricity is moving.
+            </p>
+          </div>
+          <div class="applied-grid">
+            <article class="applied-step reveal">
+              <div class="applied-step-top">
+                <span class="applied-step-number">V</span>
+                <h4>Voltage Area</h4>
+              </div>
+              <p>
+                Voltage is measured across parts of a circuit. A robot battery
+                might provide the voltage that pushes current toward a motor.
+              </p>
+            </article>
+
+            <article class="applied-step reveal">
+              <div class="applied-step-top">
+                <span class="applied-step-number">I</span>
+                <h4>Current Area</h4>
+              </div>
+              <p>
+                Current is measured through a path. More current usually means
+                more electrical flow, which can make a motor work harder.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="components">
+        <span class="section-tag reveal">Electrical Components</span>
+        <h2 class="section-heading reveal">
+          Parts That Shape and Control Power
+        </h2>
+        <p class="section-copy reveal">
+          Electrical components are the building blocks inside a robot's power
+          and control system. Each part has a job, and together they help the
+          robot use electricity safely and correctly.
+        </p>
+
+        <div class="tech-compare-grid component-grid">
+          <article class="card tech-card reveal">
+            <span class="tech-label">01</span>
+            <h3>Resistor</h3>
+            <p>
+              A resistor limits or controls the amount of current flowing
+              through part of a circuit. It helps protect components from too
+              much electrical flow.
+            </p>
+            <button
+              class="component-flip-card"
+              type="button"
+              aria-label="Resistor image flip card"
+            >
+              <span class="component-flip-inner">
+                <span class="component-flip-face component-flip-summary">
+                  <strong>Resistor</strong>
+                  <span class="flip-cue">Hover or focus to flip</span>
+                </span>
+                <span class="component-flip-face component-flip-image">
+                  <img src="images/resistor-image.jpg" alt="Electrical resistor" />
+                </span>
+              </span>
+            </button>
+          </article>
+
+          <article class="card tech-card reveal">
+            <span class="tech-label">02</span>
+            <h3>Switch</h3>
+            <p>
+              A switch opens or closes a circuit. When the switch is closed,
+              current can flow. When it is open, the circuit stops.
+            </p>
+            <button
+              class="component-flip-card"
+              type="button"
+              aria-label="Switch image flip card"
+            >
+              <span class="component-flip-inner">
+                <span class="component-flip-face component-flip-summary">
+                  <strong>Switch</strong>
+                  <span class="flip-cue">Hover or focus to flip</span>
+                </span>
+                <span class="component-flip-face component-flip-image">
+                  <img src="images/switch-image.png" alt="Electrical switch" />
+                </span>
+              </span>
+            </button>
+          </article>
+
+          <article class="card tech-card reveal">
+            <span class="tech-label">03</span>
+            <h3>Relay</h3>
+            <p>
+              A relay is an electrically controlled switch. A small control
+              signal can use a relay to turn a larger circuit on or off.
+            </p>
+            <button
+              class="component-flip-card"
+              type="button"
+              aria-label="Relay image flip card"
+            >
+              <span class="component-flip-inner">
+                <span class="component-flip-face component-flip-summary">
+                  <strong>Relay</strong>
+                  <span class="flip-cue">Hover or focus to flip</span>
+                </span>
+                <span class="component-flip-face component-flip-image">
+                  <img src="images/relay-image.png" alt="Electrical relay" />
+                </span>
+              </span>
+            </button>
+          </article>
+
+          <article class="card tech-card reveal">
+            <span class="tech-label">04</span>
+            <h3>Motor</h3>
+            <p>
+              A motor changes electrical energy into motion. Robots use motors
+              to spin wheels, move joints, turn belts, or position tools.
+            </p>
+            <button
+              class="component-flip-card"
+              type="button"
+              aria-label="Motor image flip card"
+            >
+              <span class="component-flip-inner">
+                <span class="component-flip-face component-flip-summary">
+                  <strong>Motor</strong>
+                  <span class="flip-cue">Hover or focus to flip</span>
+                </span>
+                <span class="component-flip-face component-flip-image">
+                  <img src="images/motor-image.jpg" alt="Electric motor" />
+                </span>
+              </span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section id="motor-control">
+        <span class="section-tag reveal">Motor Control</span>
+        <h2 class="section-heading reveal">
+          Turning Electricity Into Movement
+        </h2>
+        <p class="section-copy reveal">
+          Motor control means deciding when a motor runs, which direction it
+          turns, and how fast it moves. A controller, switch, relay, or motor
+          driver can send the electrical commands that make this happen.
+        </p>
+
+        <div class="job-flow motor-flow reveal" aria-label="Motor control flow">
+          <div class="flow-node">Controller signal</div>
+          <div class="flow-connector">&rarr;</div>
+          <div class="flow-node">Motor driver</div>
+          <div class="flow-connector">&rarr;</div>
+          <div class="flow-node">Electrical power</div>
+          <div class="flow-connector">&rarr;</div>
+          <div class="flow-node final">Motor motion</div>
+        </div>
+
+        <div class="applied-process reveal">
+          <div class="applied-grid">
+            <article class="applied-step reveal">
+              <div class="applied-step-top">
+                <span class="applied-step-number">1</span>
+                <h4>Turn On or Off</h4>
+              </div>
+              <p>
+                The circuit can close to let current reach the motor, or open to
+                stop current and turn the motor off.
+              </p>
+            </article>
+
+            <article class="applied-step reveal">
+              <div class="applied-step-top">
+                <span class="applied-step-number">2</span>
+                <h4>Change Direction</h4>
+              </div>
+              <p>
+                Reversing the electrical polarity can make many DC motors spin
+                the opposite direction.
+              </p>
+            </article>
+
+            <article class="applied-step reveal">
+              <div class="applied-step-top">
+                <span class="applied-step-number">3</span>
+                <h4>Control Speed</h4>
+              </div>
+              <p>
+                A controller can change how much power reaches the motor, which
+                changes how fast the motor spins.
+              </p>
+            </article>
+
+            <article class="applied-step reveal">
+              <div class="applied-step-top">
+                <span class="applied-step-number">4</span>
+                <h4>Protect the System</h4>
+              </div>
+              <p>
+                Good motor control keeps the robot from drawing too much
+                current, overheating parts, or moving unexpectedly.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="drawings">
+        <span class="section-tag reveal">Electrical Drawings</span>
+        <h2 class="section-heading reveal">
+          Schematics Show How Circuits Connect
+        </h2>
+        <p class="section-copy reveal">
+          A schematic is an electrical drawing that uses symbols and lines to
+          show how parts connect. Engineers use schematics because they make a
+          circuit easier to build, explain, test, and repair.
+        </p>
+
+        <div class="system-diagram-panel reveal">
+          <button
+            class="schematic-flip-card"
+            type="button"
+            aria-label="Schematic circuit image flip card"
+          >
+            <span class="schematic-flip-inner">
+              <span class="schematic-flip-face schematic-flip-summary">
+                <strong>Simple Circuit Diagram</strong>
+                <span>
+                  See how a schematic uses symbols and lines to show electrical
+                  connections.
+                </span>
+                <span class="flip-cue">Hover or focus to flip</span>
+              </span>
+              <span class="schematic-flip-face schematic-flip-image">
+                <img
+                  src="images/schematics-how-sircuits-connect-image.png"
+                  alt="Schematic showing how circuits connect"
+                />
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card reveal">
+            <h3>What a Schematic Is</h3>
+            <p>
+              A schematic is not usually a realistic picture of the parts. It is
+              a map that shows electrical relationships using symbols, labels,
+              and connection lines.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Why Engineers Use Them</h3>
+            <p>
+              Engineers use schematics to plan circuits, find mistakes, explain
+              designs to a team, and troubleshoot when a robot does not behave
+              correctly.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="real-robot">
+        <span class="section-tag reveal">Real Robot Example</span>
+        <h2 class="section-heading reveal">Battery-Powered Mobile Robot</h2>
+        <p class="section-copy reveal">
+          A mobile robot connects many electrical ideas in one system. The
+          battery provides DC power, the controller sends signals, motor drivers
+          manage current, and the motors turn the wheels so the robot can move.
+        </p>
+
+        <div class="applied-process reveal">
+          <div class="applied-process-header">
+            <h3>Electrical System Connected to a Robot</h3>
+            <p>
+              When the robot receives a command to drive forward, the controller
+              tells the motor driver how much power to send. The driver sends
+              controlled DC power to each motor, and the wheels rotate.
+            </p>
+          </div>
+
+          <div
+            class="job-flow robot-example-flow"
+            aria-label="Real robot electrical flow"
+          >
+            <div class="flow-node">Battery</div>
+            <div class="flow-connector">&rarr;</div>
+            <div class="flow-node">Controller</div>
+            <div class="flow-connector">&rarr;</div>
+            <div class="flow-node">Motor driver</div>
+            <div class="flow-connector">&rarr;</div>
+            <div class="flow-node final">Wheel motors</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="takeaway">
+        <span class="section-tag reveal">Final Takeaway</span>
+        <h2 class="section-heading reveal">Electricity Makes Robots Act</h2>
+        <div class="takeaway-panel reveal">
+          <p>
+            Electrical and electronic systems give robots power and control. AC
+            can power buildings and chargers, DC can power robot batteries,
+            circuits create paths for electricity, components manage that
+            electricity, and motor control turns commands into movement.
+          </p>
+        </div>
+      </section>
+
+      <section id="vocabulary">
+        <span class="section-tag reveal">Key Vocabulary</span>
+        <h2 class="section-heading reveal">Glossary of Important Terms</h2>
+        <p class="section-copy reveal">
+          These definitions explain the most important electrical words used
+          throughout this robotics systems page.
+        </p>
+
+        <div class="vocab-grid">
+          <article class="vocab-card reveal">
+            <h3>Alternating Current (AC)</h3>
+            <p>
+              Electrical current that repeatedly changes direction. AC power is
+              commonly used in buildings and wall outlets.
+            </p>
+          </article>
+
+          <article class="vocab-card reveal">
+            <h3>Direct Current (DC)</h3>
+            <p>
+              Electrical current that flows in only one direction. DC power is
+              commonly supplied by batteries and used in robots.
+            </p>
+          </article>
+
+          <article class="vocab-card reveal">
+            <h3>Voltage</h3>
+            <p>
+              The electrical force or pressure that pushes electric current
+              through a circuit.
+            </p>
+          </article>
+
+          <article class="vocab-card reveal">
+            <h3>Current</h3>
+            <p>The flow of electrical charge through a wire or circuit.</p>
+          </article>
+
+          <article class="vocab-card reveal">
+            <h3>Resistance</h3>
+            <p>
+              The amount a material or component slows down or limits the flow
+              of electrical current.
+            </p>
+          </article>
+
+          <article class="vocab-card reveal">
+            <h3>Circuit</h3>
+            <p>
+              A closed path that allows electricity to travel through connected
+              electrical components.
+            </p>
+          </article>
+
+          <article class="vocab-card reveal">
+            <h3>Relay</h3>
+            <p>
+              An electrically controlled switch that uses a small electrical
+              signal to turn a larger circuit on or off.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      &copy; 2026 AndxLab. Designed & Developed by Anderson Wang.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
